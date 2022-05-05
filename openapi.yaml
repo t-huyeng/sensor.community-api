@@ -14,11 +14,18 @@ info:
     url: "https://github.com/opendata-stuttgart/meta/wiki/EN-APIs"
 
 servers:
-  - url: "https://data.sensor.community/"
+  - url: "https://data.sensor.community"
+
+tags:
+  - name: V1
+  - name: V2
 
 paths:
   /static/v1/data.json:
     get:
+      operationId: getDataLast5Minutes
+      tags:
+        - V1
       summary: average of all measurements per sensor of the last 5 minutes for all.
       description: average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!
       responses:
@@ -31,6 +38,9 @@ paths:
 
   /airrohr/v1/filter/{query}:
     get:
+      operationId: getSensorValuesWithFilter
+      tags:
+        - V1
       summary: all measurements of the last 5 minutes filtered by query.
       description: all measurements of the last 5 minutes filtered by query.
       # https://data.sensor.community/airrohr/v1/filter/country=DE&area=52.5200,13.4050,1&type=SDS011
@@ -46,9 +56,19 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/Result"
+      parameters:
+        - in: path
+          required: true
+          name: query
+          schema:
+            type: string
+          example: country=DE
 
   /airrohr/v1/sensor/{apiID}/:
     get:
+      operationId: getDataByApiID
+      tags:
+        - V1
       summary: all measurements of the last 5 minutes for one sensor
       description: all measurements of the last 5 minutes for one sensor. (NOT chipID. API-ID can be found by clicking on your sensor on the Map).
       responses:
@@ -63,11 +83,14 @@ paths:
           required: true
           name: apiID
           schema:
-            type: string
+            type: integer
           example: 37987
 
   /static/v2/data.json:
     get:
+      operationId: getDataLast5MinutesV2
+      tags:
+        - V2
       summary: average of all measurements per sensor of the last 5 minutes for all.
       description: average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!
       responses:
@@ -79,6 +102,9 @@ paths:
                 $ref: "#/components/schemas/Result"
   /static/v2/data.1h.json:
     get:
+      operationId: getDataLast1Hour
+      tags:
+        - V2
       summary: average of all measurements per sensor of the last hour.
       description: average of all measurements per sensor of the last hour. Be careful (large response)!
       responses:
@@ -90,6 +116,9 @@ paths:
                 $ref: "#/components/schemas/Result"
   /static/v2/data.24h.json:
     get:
+      operationId: getDataLast24Hour
+      tags:
+        - V2
       summary: average of all measurements per sensor of the 24 hours.
       description: average of all measurements per sensor of the 24 hours. Be careful (large response)!
       responses:
@@ -102,6 +131,9 @@ paths:
 
   /static/v2/data.dust.min.json:
     get:
+      operationId: getDustDataLast5Minutes
+      tags:
+        - V2
       servers:
         - url: https://api.luftdaten.info/
       summary: average of all measurements per sensor of the last 5 minutes for all dust sensors only.
@@ -115,6 +147,9 @@ paths:
                 $ref: "#/components/schemas/Result"
   /static/v2/data.temp.min.json:
     get:
+      operationId: getTempHumAirDataLast5Minutes
+      tags:
+        - V2
       servers:
         - url: https://api.luftdaten.info/
       summary: average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only.
