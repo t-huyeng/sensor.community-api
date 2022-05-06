@@ -50,7 +50,7 @@ jobs:
 
   generate-python-client:
     runs-on: ubuntu-latest
-    name: "Javascript Client"
+    name: "Python Client"
     steps:
       # Checkout your code
       - name: Checkout
