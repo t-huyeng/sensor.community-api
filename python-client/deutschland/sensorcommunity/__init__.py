@@ -13,13 +13,13 @@
 __version__ = "1.0.0"
 
 # import ApiClient
-from openapi_client.api_client import ApiClient
+from deutschland.sensorcommunity.api_client import ApiClient
 
 # import Configuration
-from openapi_client.configuration import Configuration
+from deutschland.sensorcommunity.configuration import Configuration
 
 # import exceptions
-from openapi_client.exceptions import (
+from deutschland.sensorcommunity.exceptions import (
     ApiAttributeError,
     ApiException,
     ApiKeyError,

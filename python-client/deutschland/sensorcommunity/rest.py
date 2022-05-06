@@ -18,7 +18,7 @@ from urllib.parse import urlencode, urlparse
 from urllib.request import proxy_bypass_environment
 
 import urllib3
-from openapi_client.exceptions import (
+from deutschland.sensorcommunity.exceptions import (
     ApiException,
     ApiValueError,
     ForbiddenException,
