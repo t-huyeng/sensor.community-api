@@ -17,6 +17,24 @@ jobs:
           openapi-file: openapi.yaml
           config-file: config.yml
 
+      - name: "Add and Commit files"
+        run: |
+          git status
+          git pull
+          git config --local user.email "Test@users.noreply.github.com"
+          git config --local user.name "testbot"
+          git add ${{ github.workspace }}/javascript-client
+          git commit --allow-empty -m "Generate newest code from openapi.yaml" -a
+        shell: bash
+        if: ${{ inputs.commit-to-git == 'true' }}
+
+      - name: "Push changes"
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ github.token }}
+          branch: ${{ github.ref }}
+        if: ${{ inputs.commit-to-git == 'true' }}
+
       # Do something with the generated client (likely publishing it somewhere)
       # - name: Do something with the client
       #   run: |
