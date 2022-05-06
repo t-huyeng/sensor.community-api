@@ -26,7 +26,7 @@ jobs:
         with:
           openapi-file: ${{ github.workspace }}/openapi.yaml
           commit-to-git: true
-          upload-to-pypi: true
+          upload-to-pypi: false
           upload-to-testpypi: false
           pypi-token: ${{ secrets.PYPI_PRODUCTION }}
           testpypi-token: ${{ secrets.PYPI_TEST }}
