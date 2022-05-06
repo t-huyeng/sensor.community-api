@@ -15,68 +15,36 @@ jobs:
         with:
           generator: javascript
           openapi-file: openapi.yaml
-          config-file: config.yml
+          # config-file: config.yml
+
+      - name: "Print dir after generation"
+        run: |
+          echo "======================== Github Workspace ===================================="
+          ls ${{ github.workspace }}
+          echo "======================== Python Client ===================================="
+          ls ${{ github.workspace }}/javascript-client
+        shell: bash
+
+
+      - name: "Install black and isort and use it to format code"
+        run: |
+          pip install black isort
+          black ${{ github.workspace }}/javascript-client/
+          isort  --profile black ${{ github.workspace }}/javascript-client/
+        shell: bash
 
       - name: "Add and Commit files"
         run: |
           git status
           git pull
-          git config --local user.email "Test@users.noreply.github.com"
-          git config --local user.name "testbot"
+          git config --local user.email "bundesAPI@users.noreply.github.com"
+          git config --local user.name "bundesbot"
           git add ${{ github.workspace }}/javascript-client
           git commit --allow-empty -m "Generate newest code from openapi.yaml" -a
         shell: bash
-        if: ${{ inputs.commit-to-git == 'true' }}
 
       - name: "Push changes"
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ github.token }}
           branch: ${{ github.ref }}
-        if: ${{ inputs.commit-to-git == 'true' }}
-
-      # Do something with the generated client (likely publishing it somewhere)
-      # - name: Do something with the client
-      #   run: |
-      #     cd typescript-angular-client
-
-  # generate-python-client:
-  #   runs-on: ubuntu-latest
-  #   name: "Python Client"
-  #   steps:
-  #     # Checkout your code
-  #     - name: Checkout
-  #       uses: actions/checkout@v2
-
-  #     - name: "setup python"
-  #       uses: actions/setup-python@v2
-  #       with:
-  #         python-version: ${{ inputs.python-version }}
-  #     # Use the action to generate a client package
-  #     # This uses the default path for the openapi document and thus assumes there is an openapi.json in the current workspace.
-  #     - name: "Clean up existing generated code"
-  #       run: |
-  #         sudo rm -rf ${{ github.workspace }}/python-client
-  #       shell: bash
-
-  #     # - name: "Copy deutschland templates into workspace if it not already exists"
-  #     #   run: |
-  #     #     cp -rn ${{ github.action_path }}/deutschland_templates ${{ github.workspace }}
-  #     #     ls ${{ github.workspace }}
-  #     #   shell: bash
-
-  #     - name: "Print dir after generation"
-  #       run: |
-  #         echo "======================== Github Workspace ===================================="
-  #         ls ${{ github.workspace }}
-  #         echo "======================== Github Action Path ===================================="
-  #         ${{ github.action_path }}
-  #         # echo "======================== Python Client ===================================="
-  #         # ls ${{ github.workspace }}/python-client
-  #       shell: bash
-  #     - name: "Generate Python Client"
-  #       uses: openapi-generators/openapitools-generator-action@v1
-  #       with:
-  #         generator: python
-  #         openapi-file: openapi.yaml
-  #         # config-file: generator_config.yaml
