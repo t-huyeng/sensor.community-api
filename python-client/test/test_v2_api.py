@@ -10,9 +10,8 @@
 
 import unittest
 
-from deutschland.sensorcommunity.api.v2_api import V2Api  # noqa: E501
-
 from deutschland import sensorcommunity
+from deutschland.sensorcommunity.api.v2_api import V2Api  # noqa: E501
 
 
 class TestV2Api(unittest.TestCase):

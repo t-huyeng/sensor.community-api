@@ -1,4 +1,4 @@
-# sensorcommunity
+# openapi-client
 This is the API for the Sensor Community. There are two domains where the same data is served.
 
 https://api.luftdaten.info - This is optimized for receiving data. DON'T use this to request data.
@@ -14,19 +14,21 @@ For more information, please visit [https://github.com/opendata-stuttgart/meta/w
 
 ## Requirements.
 
-Python >= 3.6
+Python >=3.6
 
 ## Installation & Usage
 ### pip install
 
+If the python package is hosted on a repository, you can install directly using:
+
 ```sh
-pip install deutschland[sensorcommunity]
+pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git
 ```
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/GIT_USER_ID/GIT_REPO_ID.git`)
 
-### poetry install
-
-```sh
-poetry add deutschland -E sensorcommunity
+Then import the package:
+```python
+import openapi_client
 ```
 
 ### Setuptools
@@ -38,11 +40,9 @@ python setup.py install --user
 ```
 (or `sudo python setup.py install` to install the package for all users)
 
-## Usage
-
-Import the package:
+Then import the package:
 ```python
-from deutschland import sensorcommunity
+import openapi_client
 ```
 
 ## Getting Started
@@ -52,19 +52,19 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 
 import time
-from deutschland import sensorcommunity
+import openapi_client
 from pprint import pprint
-from deutschland.sensorcommunity.api import v1_api
+from openapi_client.api import v1_api
 # Defining the host is optional and defaults to https://data.sensor.community
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sensorcommunity.Configuration(
+configuration = openapi_client.Configuration(
     host = "https://data.sensor.community"
 )
 
 
 
 # Enter a context with an instance of the API client
-with sensorcommunity.ApiClient(configuration) as api_client:
+with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = v1_api.V1Api(api_client)
     api_id = 37987 # int | 
@@ -73,7 +73,7 @@ with sensorcommunity.ApiClient(configuration) as api_client:
         # all measurements of the last 5 minutes for one sensor
         api_response = api_instance.get_data_by_api_id(api_id)
         pprint(api_response)
-    except sensorcommunity.ApiException as e:
+    except openapi_client.ApiException as e:
         print("Exception when calling V1Api->get_data_by_api_id: %s\n" % e)
 ```
 
@@ -107,21 +107,21 @@ Class | Method | HTTP request | Description
 
 
 ## Notes for Large OpenAPI documents
-If the OpenAPI document is large, imports in sensorcommunity.apis and sensorcommunity.models may fail with a
+If the OpenAPI document is large, imports in openapi_client.apis and openapi_client.models may fail with a
 RecursionError indicating the maximum recursion limit has been exceeded. In that case, there are a couple of solutions:
 
 Solution 1:
 Use specific imports for apis and models like:
-- `from deutschland.sensorcommunity.api.default_api import DefaultApi`
-- `from deutschland.sensorcommunity.model.pet import Pet`
+- `from openapi_client.api.default_api import DefaultApi`
+- `from openapi_client.model.pet import Pet`
 
 Solution 2:
 Before importing the package, adjust the maximum recursion limit as shown below:
 ```
 import sys
 sys.setrecursionlimit(1500)
-from deutschland import sensorcommunity
-from deutschland.sensorcommunity.apis import *
-from deutschland.sensorcommunity.models import *
+import openapi_client
+from openapi_client.apis import *
+from openapi_client.models import *
 ```
 

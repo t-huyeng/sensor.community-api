@@ -1,4 +1,4 @@
-# sensorcommunity.V1Api
+# openapi_client.V1Api
 
 All URIs are relative to *https://data.sensor.community*
 
@@ -21,18 +21,18 @@ all measurements of the last 5 minutes for one sensor. (NOT chipID. API-ID can b
 
 ```python
 import time
-from deutschland import sensorcommunity
-from deutschland.sensorcommunity.api import v1_api
+import openapi_client
+from openapi_client.api import v1_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://data.sensor.community
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sensorcommunity.Configuration(
+configuration = openapi_client.Configuration(
     host = "https://data.sensor.community"
 )
 
 
 # Enter a context with an instance of the API client
-with sensorcommunity.ApiClient() as api_client:
+with openapi_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = v1_api.V1Api(api_client)
     api_id = 37987 # int | 
@@ -42,7 +42,7 @@ with sensorcommunity.ApiClient() as api_client:
         # all measurements of the last 5 minutes for one sensor
         api_response = api_instance.get_data_by_api_id(api_id)
         pprint(api_response)
-    except sensorcommunity.ApiException as e:
+    except openapi_client.ApiException as e:
         print("Exception when calling V1Api->get_data_by_api_id: %s\n" % e)
 ```
 
@@ -87,18 +87,18 @@ average of all measurements per sensor of the last 5 minutes for all. Be careful
 
 ```python
 import time
-from deutschland import sensorcommunity
-from deutschland.sensorcommunity.api import v1_api
+import openapi_client
+from openapi_client.api import v1_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://data.sensor.community
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sensorcommunity.Configuration(
+configuration = openapi_client.Configuration(
     host = "https://data.sensor.community"
 )
 
 
 # Enter a context with an instance of the API client
-with sensorcommunity.ApiClient() as api_client:
+with openapi_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = v1_api.V1Api(api_client)
 
@@ -107,7 +107,7 @@ with sensorcommunity.ApiClient() as api_client:
         # average of all measurements per sensor of the last 5 minutes for all.
         api_response = api_instance.get_data_last5_minutes()
         pprint(api_response)
-    except sensorcommunity.ApiException as e:
+    except openapi_client.ApiException as e:
         print("Exception when calling V1Api->get_data_last5_minutes: %s\n" % e)
 ```
 
@@ -149,18 +149,18 @@ all measurements of the last 5 minutes filtered by query.
 
 ```python
 import time
-from deutschland import sensorcommunity
-from deutschland.sensorcommunity.api import v1_api
+import openapi_client
+from openapi_client.api import v1_api
 from pprint import pprint
 # Defining the host is optional and defaults to https://data.sensor.community
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sensorcommunity.Configuration(
+configuration = openapi_client.Configuration(
     host = "https://data.sensor.community"
 )
 
 
 # Enter a context with an instance of the API client
-with sensorcommunity.ApiClient() as api_client:
+with openapi_client.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = v1_api.V1Api(api_client)
     query = "country=DE" # str | 
@@ -170,7 +170,7 @@ with sensorcommunity.ApiClient() as api_client:
         # all measurements of the last 5 minutes filtered by query.
         api_response = api_instance.get_sensor_values_with_filter(query)
         pprint(api_response)
-    except sensorcommunity.ApiException as e:
+    except openapi_client.ApiException as e:
         print("Exception when calling V1Api->get_sensor_values_with_filter: %s\n" % e)
 ```
 
