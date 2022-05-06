@@ -1,15 +1,12 @@
 templateDir: deutschland_templates # For local use: ./local/deutschland_templates
 additionalProperties:
-  packageName: "<NAME>"
-  infoName: "BundesAPI"
-  infoEmail: "kontakt@bund.dev"
-  packageVersion: <VERSION>
-  packageUrl: "https://github.com/bundesAPI/<REPO>"
+  packageName: "sensorcommunity"
+  packageUrl: "https://github.com/t=huyeng/sensorcommunity"
   namespace: "deutschland"
   docLanguage: "de"
 gitHost: "github.com"
-gitUserId: "bundesAPI"
-gitRepoId: "<REPO-ID>"
+gitUserId: "t-huyeng"
+# gitRepoId: "<REPO-ID>"
 files:
   pyproject.mustache:
     destinationFilename: pyproject.toml
