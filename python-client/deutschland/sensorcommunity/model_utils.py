@@ -19,7 +19,7 @@ from copy import deepcopy
 from datetime import date, datetime  # noqa: F401
 
 from dateutil.parser import parse
-from openapi_client.exceptions import (
+from deutschland.sensorcommunity.exceptions import (
     ApiAttributeError,
     ApiKeyError,
     ApiTypeError,

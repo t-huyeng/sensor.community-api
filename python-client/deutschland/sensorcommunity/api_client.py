@@ -18,10 +18,14 @@ import typing
 from multiprocessing.pool import ThreadPool
 from urllib.parse import quote
 
-from openapi_client import rest
-from openapi_client.configuration import Configuration
-from openapi_client.exceptions import ApiException, ApiTypeError, ApiValueError
-from openapi_client.model_utils import (
+from deutschland.sensorcommunity import rest
+from deutschland.sensorcommunity.configuration import Configuration
+from deutschland.sensorcommunity.exceptions import (
+    ApiException,
+    ApiTypeError,
+    ApiValueError,
+)
+from deutschland.sensorcommunity.model_utils import (
     ModelComposed,
     ModelNormal,
     ModelSimple,

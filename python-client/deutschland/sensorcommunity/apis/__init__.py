@@ -5,7 +5,7 @@
 # raise a `RecursionError`.
 # In order to avoid this, import only the API that you directly need like:
 #
-#   from openapi_client.api.v1_api import V1Api
+#   from deutschland.sensorcommunity.api.v1_api import V1Api
 #
 # or import this package, but before doing it, use:
 #
@@ -13,5 +13,5 @@
 #   sys.setrecursionlimit(n)
 
 # Import APIs into API package:
-from openapi_client.api.v1_api import V1Api
-from openapi_client.api.v2_api import V2Api
+from deutschland.sensorcommunity.api.v1_api import V1Api
+from deutschland.sensorcommunity.api.v2_api import V2Api
