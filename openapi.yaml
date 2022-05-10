@@ -27,7 +27,7 @@ paths:
       tags:
         - V1
       summary: average of all measurements per sensor of the last 5 minutes for all.
-      description: average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!
+      description: average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!. Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -92,7 +92,7 @@ paths:
       tags:
         - V2
       summary: average of all measurements per sensor of the last 5 minutes for all.
-      description: average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!
+      description: average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -106,7 +106,7 @@ paths:
       tags:
         - V2
       summary: average of all measurements per sensor of the last hour.
-      description: average of all measurements per sensor of the last hour. Be careful (large response)!
+      description: average of all measurements per sensor of the last hour. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -120,7 +120,7 @@ paths:
       tags:
         - V2
       summary: average of all measurements per sensor of the 24 hours.
-      description: average of all measurements per sensor of the 24 hours. Be careful (large response)!
+      description: average of all measurements per sensor of the 24 hours. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -137,7 +137,7 @@ paths:
       servers:
         - url: https://api.luftdaten.info/
       summary: average of all measurements per sensor of the last 5 minutes for all dust sensors only.
-      description: average of all measurements per sensor of the last 5 minutes for all dust sensors only. Be careful (large response)!
+      description: average of all measurements per sensor of the last 5 minutes for all dust sensors only. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -153,7 +153,7 @@ paths:
       servers:
         - url: https://api.luftdaten.info/
       summary: average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only.
-      description: average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only. Be careful (large response)!
+      description: average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
