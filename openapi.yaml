@@ -26,8 +26,8 @@ paths:
       operationId: getDataLast5Minutes
       tags:
         - V1
-      summary: average of all measurements per sensor of the last 5 minutes for all.
-      description: average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!. Do not use this in the OpenAPI UI!
+      summary: Average of all measurements per sensor of the last 5 minutes for all.
+      description: Average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!. Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -91,8 +91,8 @@ paths:
       operationId: getDataLast5MinutesV2
       tags:
         - V2
-      summary: average of all measurements per sensor of the last 5 minutes for all.
-      description: average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)! Do not use this in the OpenAPI UI!
+      summary: Average of all measurements per sensor of the last 5 minutes for all.
+      description: Average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -105,8 +105,8 @@ paths:
       operationId: getDataLast1Hour
       tags:
         - V2
-      summary: average of all measurements per sensor of the last hour.
-      description: average of all measurements per sensor of the last hour. Be careful (large response)! Do not use this in the OpenAPI UI!
+      summary: Average of all measurements per sensor of the last hour.
+      description: Average of all measurements per sensor of the last hour. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -119,8 +119,8 @@ paths:
       operationId: getDataLast24Hour
       tags:
         - V2
-      summary: average of all measurements per sensor of the 24 hours.
-      description: average of all measurements per sensor of the 24 hours. Be careful (large response)! Do not use this in the OpenAPI UI!
+      summary: Average of all measurements per sensor of the 24 hours.
+      description: Average of all measurements per sensor of the 24 hours. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -136,8 +136,8 @@ paths:
         - V2
       servers:
         - url: https://api.luftdaten.info/
-      summary: average of all measurements per sensor of the last 5 minutes for all dust sensors only.
-      description: average of all measurements per sensor of the last 5 minutes for all dust sensors only. Be careful (large response)! Do not use this in the OpenAPI UI!
+      summary: Average of all measurements per sensor of the last 5 minutes for all dust sensors only.
+      description: Average of all measurements per sensor of the last 5 minutes for all dust sensors only. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -152,8 +152,8 @@ paths:
         - V2
       servers:
         - url: https://api.luftdaten.info/
-      summary: average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only.
-      description: average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only. Be careful (large response)! Do not use this in the OpenAPI UI!
+      summary: Average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only.
+      description: Average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
