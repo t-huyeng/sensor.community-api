@@ -199,7 +199,7 @@ class V2Api(object):
     def get_data_last1_hour(self, **kwargs):
         """average of all measurements per sensor of the last hour.  # noqa: E501
 
-        average of all measurements per sensor of the last hour. Be careful (large response)!  # noqa: E501
+        average of all measurements per sensor of the last hour. Be careful (large response)! Do not use this in the OpenAPI UI!  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -259,7 +259,7 @@ class V2Api(object):
     def get_data_last24_hour(self, **kwargs):
         """average of all measurements per sensor of the 24 hours.  # noqa: E501
 
-        average of all measurements per sensor of the 24 hours. Be careful (large response)!  # noqa: E501
+        average of all measurements per sensor of the 24 hours. Be careful (large response)! Do not use this in the OpenAPI UI!  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -319,7 +319,7 @@ class V2Api(object):
     def get_data_last5_minutes_v2(self, **kwargs):
         """average of all measurements per sensor of the last 5 minutes for all.  # noqa: E501
 
-        average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!  # noqa: E501
+        average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)! Do not use this in the OpenAPI UI!  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -379,7 +379,7 @@ class V2Api(object):
     def get_dust_data_last5_minutes(self, **kwargs):
         """average of all measurements per sensor of the last 5 minutes for all dust sensors only.  # noqa: E501
 
-        average of all measurements per sensor of the last 5 minutes for all dust sensors only. Be careful (large response)!  # noqa: E501
+        average of all measurements per sensor of the last 5 minutes for all dust sensors only. Be careful (large response)! Do not use this in the OpenAPI UI!  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -439,7 +439,7 @@ class V2Api(object):
     def get_temp_hum_air_data_last5_minutes(self, **kwargs):
         """average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only.  # noqa: E501
 
-        average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only. Be careful (large response)!  # noqa: E501
+        average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only. Be careful (large response)! Do not use this in the OpenAPI UI!  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

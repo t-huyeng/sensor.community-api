@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 average of all measurements per sensor of the last hour.
 
-average of all measurements per sensor of the last hour. Be careful (large response)!
+average of all measurements per sensor of the last hour. Be careful (large response)! Do not use this in the OpenAPI UI!
 
 ### Example
 
@@ -78,7 +78,7 @@ No authorization required
 
 average of all measurements per sensor of the 24 hours.
 
-average of all measurements per sensor of the 24 hours. Be careful (large response)!
+average of all measurements per sensor of the 24 hours. Be careful (large response)! Do not use this in the OpenAPI UI!
 
 ### Example
 
@@ -140,7 +140,7 @@ No authorization required
 
 average of all measurements per sensor of the last 5 minutes for all.
 
-average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!
+average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)! Do not use this in the OpenAPI UI!
 
 ### Example
 
@@ -202,7 +202,7 @@ No authorization required
 
 average of all measurements per sensor of the last 5 minutes for all dust sensors only.
 
-average of all measurements per sensor of the last 5 minutes for all dust sensors only. Be careful (large response)!
+average of all measurements per sensor of the last 5 minutes for all dust sensors only. Be careful (large response)! Do not use this in the OpenAPI UI!
 
 ### Example
 
@@ -264,7 +264,7 @@ No authorization required
 
 average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only.
 
-average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only. Be careful (large response)!
+average of all measurements per sensor of the last 5 minutes for all temp./humidity/air pressure sensors only. Be careful (large response)! Do not use this in the OpenAPI UI!
 
 ### Example
 

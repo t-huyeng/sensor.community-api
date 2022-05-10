@@ -212,7 +212,7 @@ class V1Api(object):
     def get_data_last5_minutes(self, **kwargs):
         """average of all measurements per sensor of the last 5 minutes for all.  # noqa: E501
 
-        average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!  # noqa: E501
+        average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!. Do not use this in the OpenAPI UI!  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

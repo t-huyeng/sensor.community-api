@@ -80,7 +80,7 @@ No authorization required
 
 average of all measurements per sensor of the last 5 minutes for all.
 
-average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!
+average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!. Do not use this in the OpenAPI UI!
 
 ### Example
 
