@@ -1,0 +1,16 @@
+.babelrc
+.gitignore
+.openapi-generator-ignore
+.travis.yml
+README.md
+docs/V1Api.md
+docs/V2Api.md
+git_push.sh
+mocha.opts
+package.json
+src/ApiClient.js
+src/api/V1Api.js
+src/api/V2Api.js
+src/index.js
+test/api/V1Api.spec.js
+test/api/V2Api.spec.js
