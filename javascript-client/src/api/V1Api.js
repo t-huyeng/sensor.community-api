@@ -70,7 +70,7 @@ export default class V1Api {
       let accepts = ['application/json'];
       let returnType = 'String';
       return this.apiClient.callApi(
-        '/airrohr/v1/sensor/{apiID}/', 'GET',
+        '/airrohr/v1/sensor/{apiID}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -86,7 +86,7 @@ export default class V1Api {
 
     /**
      * Average of all measurements per sensor of the last 5 minutes for all.
-     * Average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!. Do not use this in the OpenAPI UI!
+     * Average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)! Do not use this in the OpenAPI UI!
      * @param {module:api/V1Api~getDataLast5MinutesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link String}
      */

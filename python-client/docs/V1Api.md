@@ -4,7 +4,7 @@ All URIs are relative to *https://data.sensor.community*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_data_by_api_id**](V1Api.md#get_data_by_api_id) | **GET** /airrohr/v1/sensor/{apiID}/ | All measurements of the last 5 minutes for one sensor
+[**get_data_by_api_id**](V1Api.md#get_data_by_api_id) | **GET** /airrohr/v1/sensor/{apiID} | All measurements of the last 5 minutes for one sensor
 [**get_data_last5_minutes**](V1Api.md#get_data_last5_minutes) | **GET** /static/v1/data.json | Average of all measurements per sensor of the last 5 minutes for all.
 [**get_sensor_values_with_filter**](V1Api.md#get_sensor_values_with_filter) | **GET** /airrohr/v1/filter/{query} | All measurements of the last 5 minutes filtered by query.
 
@@ -80,7 +80,7 @@ No authorization required
 
 Average of all measurements per sensor of the last 5 minutes for all.
 
-Average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!. Do not use this in the OpenAPI UI!
+Average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)! Do not use this in the OpenAPI UI!
 
 ### Example
 

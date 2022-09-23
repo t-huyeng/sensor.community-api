@@ -83,7 +83,7 @@ All URIs are relative to *https://data.sensor.community*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*V1Api* | [**get_data_by_api_id**](docs/V1Api.md#get_data_by_api_id) | **GET** /airrohr/v1/sensor/{apiID}/ | All measurements of the last 5 minutes for one sensor
+*V1Api* | [**get_data_by_api_id**](docs/V1Api.md#get_data_by_api_id) | **GET** /airrohr/v1/sensor/{apiID} | All measurements of the last 5 minutes for one sensor
 *V1Api* | [**get_data_last5_minutes**](docs/V1Api.md#get_data_last5_minutes) | **GET** /static/v1/data.json | Average of all measurements per sensor of the last 5 minutes for all.
 *V1Api* | [**get_sensor_values_with_filter**](docs/V1Api.md#get_sensor_values_with_filter) | **GET** /airrohr/v1/filter/{query} | All measurements of the last 5 minutes filtered by query.
 *V2Api* | [**get_data_last1_hour**](docs/V2Api.md#get_data_last1_hour) | **GET** /static/v2/data.1h.json | Average of all measurements per sensor of the last hour.

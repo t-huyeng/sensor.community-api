@@ -38,7 +38,7 @@ class V1Api(object):
             settings={
                 'response_type': (str,),
                 'auth': [],
-                'endpoint_path': '/airrohr/v1/sensor/{apiID}/',
+                'endpoint_path': '/airrohr/v1/sensor/{apiID}',
                 'operation_id': 'get_data_by_api_id',
                 'http_method': 'GET',
                 'servers': None,
@@ -264,7 +264,7 @@ class V1Api(object):
     ):
         """Average of all measurements per sensor of the last 5 minutes for all.  # noqa: E501
 
-        Average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!. Do not use this in the OpenAPI UI!  # noqa: E501
+        Average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)! Do not use this in the OpenAPI UI!  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
