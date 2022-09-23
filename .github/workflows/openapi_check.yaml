@@ -2,8 +2,12 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'openapi.yaml'
   pull_request:
     types: [opened, reopened]
+    paths:
+      - 'openapi.yaml'
 
 jobs:
     openapi_check:
