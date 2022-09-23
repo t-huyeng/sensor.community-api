@@ -27,7 +27,7 @@ paths:
       tags:
         - V1
       summary: Average of all measurements per sensor of the last 5 minutes for all.
-      description: Average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)!. Do not use this in the OpenAPI UI!
+      description: Average of all measurements per sensor of the last 5 minutes for all. Be careful (large response)! Do not use this in the OpenAPI UI!
       responses:
         "200":
           description: OK
@@ -64,7 +64,7 @@ paths:
             type: string
           example: country=DE
 
-  /airrohr/v1/sensor/{apiID}/:
+  /airrohr/v1/sensor/{apiID}:
     get:
       operationId: getDataByApiID
       tags:
