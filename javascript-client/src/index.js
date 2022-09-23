@@ -18,7 +18,7 @@ import V2Api from './api/V2Api';
 
 
 /**
-* This_is_the_API_for_the_Sensor_Community__There_are_two_domains_where_the_same_data_is_served_https__api_luftdaten_info___This_is_optimized_for_receiving_data__DONT_use_this_to_request_data_https__data_sensor_community___This_is_faster_and_more_reliable_for_serving_data_so_should_be_used_for_reporting_cases__Where_it_is_not_supported_for_a_certain_endpoint_the_previous_domain_must_be_used_.<br>
+* This is the API for the Sensor Community. There are two domains where the same data is served.  https://api.luftdaten.info - This is optimized for receiving data. DON&#39;T use this to request data.  https://data.sensor.community - This is faster and more reliable for serving data, so should be used for reporting cases. Where it is not supported for a certain endpoint, the previous domain must be used..<br>
 * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
