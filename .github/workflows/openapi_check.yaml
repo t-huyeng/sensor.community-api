@@ -1,13 +1,6 @@
 on:
   push:
-    branches:
-      - main
-    paths:
-      - "openapi.yaml"
-      - "openapi_en.yaml"
-
   pull_request:
-    types: [opened, reopened]
     paths:
       - "openapi.yaml"
       - "openapi_en.yaml"
