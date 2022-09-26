@@ -1,16 +1,19 @@
-on:
-  push:
-    branches:
-      - main
+on: [push,pull_request]
     paths:
-      - "openapi.yaml"
-      - "openapi_en.yaml"
+      - "openapi*.yaml"
 
-  pull_request:
-    types: [opened, reopened]
-    paths:
-      - "openapi.yaml"
-      - "openapi_en.yaml"
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - "openapi.yaml"
+  #     - "openapi_en.yaml"
+
+  # pull_request:
+  #   types: [opened, reopened]
+  #   paths:
+  #     - "openapi.yaml"
+  #     - "openapi_en.yaml"
 
 jobs:
   openapi_check:
