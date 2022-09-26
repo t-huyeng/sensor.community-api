@@ -10,6 +10,7 @@ info:
 
 
     https://data.sensor.community - This is faster and more reliable for serving data, so should be used for reporting cases. Where it is not supported for a certain endpoint, the previous domain must be used.
+
   contact:
     url: "https://github.com/opendata-stuttgart/meta/wiki/EN-APIs"
 
